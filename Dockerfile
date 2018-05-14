@@ -3,7 +3,7 @@ MAINTAINER Niklas Merz
 
 # Install apt packages
 RUN apt update && apt install --yes curl
-RUN curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 RUN apt install -y git lib32stdc++6 lib32z1 nodejs s3cmd build-essential openjdk-8-jdk-headless sendemail libio-socket-ssl-perl libnet-ssleay-perl && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install android SDK, tools and platforms
