@@ -12,7 +12,7 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 RUN echo 'y' | /opt/android-sdk-linux/tools/android update sdk -u -a -t platform-tools,build-tools-23.0.3,android-23,extra-android-support,extra-google-m2repository,extra-android-m2repository
 
 # Install npm packages
-RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
+RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean --force
 
 # Create dummy app to build and preload gradle and maven dependencies
 RUN git config --global user.email "you@example.com" && git config --global user.name "Your Name"
