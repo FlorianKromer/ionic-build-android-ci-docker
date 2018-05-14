@@ -16,6 +16,7 @@ RUN npm i -g cordova ionic gulp bower grunt phonegap && npm cache clean
 
 # Create dummy app to build and preload gradle and maven dependencies
 RUN git config --global user.email "you@example.com" && git config --global user.name "Your Name"
-RUN cd / && echo 'n' | ionic start --no-interactive --no-link app blank && cd /app && ionic --no-interactive platform add android && ionic --no-interactive build android && rm -rf * .??*
+RUN cd / && mkdir www && echo 'n' | ionic start --no-interactive --no-link app blank && cd /app && ionic --no-interactive platform add android && ionic --no-interactive build android && rm -rf * .??*
+
 
 WORKDIR /app
