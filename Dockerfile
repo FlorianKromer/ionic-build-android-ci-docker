@@ -4,7 +4,7 @@ MAINTAINER Florian Kromer
 # Install apt packages
 RUN apt update && apt install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
-RUN apt install -y git lib32stdc++6 lib32z1 nodejs s3cmd build-essential openjdk-8-jdk-headless sendemail libio-socket-ssl-perl libnet-ssleay-perl && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt install -y git lib32stdc++6 lib32z1 nodejs s3cmd build-essential openjdk-8-jdk-headless gradle sendemail libio-socket-ssl-perl libnet-ssleay-perl && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install android SDK, tools and platforms
 RUN cd /opt && curl https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz -o android-sdk.tgz && tar xzf android-sdk.tgz && rm android-sdk.tgz
